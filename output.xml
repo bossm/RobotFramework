@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220802 01:10:09.098" rpa="false" schemaversion="3">
+<suite id="s1" name="Android Create Web Session.Test" source="c:\Users\Administrator\Desktop\robotframework-appium-sample\tests\android_create_web_session.test.robot">
+<test id="s1-t1" name="Should Create and Destroy Android Web Session" line="6">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>browserName=Chrome</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220802 01:10:18.753" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220802 01:10:18.749" endtime="20220802 01:10:18.768"/>
+</kw>
+<msg timestamp="20220802 01:10:18.772" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220802 01:10:18.775" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: An unknown server-side error occurred while processing the command. Original error: unknown error: Device emulator-5554 is already in use
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64)
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: An unknown server-side error occurred while processing the command. Original error: unknown error: Device emulator-5554 is already in use
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64)
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20220802 01:10:09.386" endtime="20220802 01:10:18.776"/>
+</kw>
+<kw name="Go To Url" library="AppiumLibrary">
+<arg>https://www.varzesh3.com</arg>
+<doc>Opens URL in default web browser.</doc>
+<status status="NOT RUN" starttime="20220802 01:10:18.777" endtime="20220802 01:10:18.777"/>
+</kw>
+<kw name="Execute Script" library="AppiumLibrary">
+<var>${page_title}</var>
+<arg>return document.title</arg>
+<doc>Inject a snippet of JavaScript into the page for execution in the
+context of the currently selected frame (Web context only).</doc>
+<status status="NOT RUN" starttime="20220802 01:10:18.777" endtime="20220802 01:10:18.778"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${page_title}</arg>
+<arg>Google</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20220802 01:10:18.778" endtime="20220802 01:10:18.778"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="NOT RUN" starttime="20220802 01:10:18.779" endtime="20220802 01:10:18.779"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220802 01:10:18.780" endtime="20220802 01:10:18.780"/>
+</kw>
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<arg>No application is open</arg>
+<arg>execute script</arg>
+<arg>return document.title</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" starttime="20220802 01:10:18.780" endtime="20220802 01:10:18.780"/>
+</kw>
+<status status="FAIL" starttime="20220802 01:10:09.385" endtime="20220802 01:10:18.781">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: An unknown server-side error occurred while processing the command. Original error: unknown error: Device emulator-5554 is already in use
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64)
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: An unknown server-side error occurred while processing the command. Original error: unknown error: Device emulator-5554 is already in use
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64)
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</status>
+</test>
+<doc>Android Web Session</doc>
+<status status="FAIL" starttime="20220802 01:10:09.104" endtime="20220802 01:10:18.786"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Android Create Web Session.Test">Android Create Web Session.Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220802 01:10:18.772" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
